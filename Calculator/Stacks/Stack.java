@@ -11,20 +11,23 @@ public class Stack<T> implements IStack<T>{
 
     @Override
     public void push(T value) {
-        // TODO Auto-generated method stub
-        
+        vector.add(value);
     }
 
     @Override
     public T pull() {
-        // TODO Auto-generated method stub
-        return null;
+        if(!isEmpty()){
+            T temp = vector.lastElement();
+            vector.remove(vector.size() - 1);
+            return temp;    
+        }else{
+            return null;
+        }
     }
 
     @Override
     public T peek() {
-        // TODO Auto-generated method stub
-        return null;
+        return vector.lastElement();
     }
 
     @Override
