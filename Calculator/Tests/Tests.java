@@ -8,6 +8,8 @@ package Tests;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import org.junit.Test;
+
+import Calculator.Calculadora;
 import Stacks.Stack;
 
 public class Tests {
@@ -57,5 +59,16 @@ public class Tests {
         assertEquals(false, st.isEmpty());
         st.pull();
         assertEquals(true, st.isEmpty());
+    }
+
+    Calculadora calc;
+    @Test
+    public void evaluateTest(){
+        calc = new Calculadora();
+        assertEquals(15, calc.Evaluate("1 2 + 4 * 3 +"));
+        assertEquals(-16, calc.Evaluate("4 5 7 2 + - *"));
+        assertEquals(2, calc.Evaluate("3 4 + 2 * 7 /"));
+        assertEquals(48, calc.Evaluate("5 7 + 6 2 - *"));
+        assertEquals(18, calc.Evaluate("4 2 + 3 5 1 - * +"));
     }
 }
