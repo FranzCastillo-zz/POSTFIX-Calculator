@@ -1,6 +1,8 @@
 package Calculator;
 
 import java.util.Arrays;
+import java.util.InputMismatchException;
+
 import Stacks.Stack;
 
 /**
@@ -46,34 +48,23 @@ public class Calculadora implements IPosfixCalc{
                         break;
                     }
                 }else{
-                    
+                    throw new InputMismatchException();
                 }
             }
-        }catch(ArithmeticException e){
-            System.out.print("Division entre 0");
-        }
-        return stack.pop();            
-        /*for (Character c : expresion.toCharArray()) {
-            if(Character.isDigit(c)){
-                stack.push(Character.getNumericValue(c));
-            }else if(c.equals('+')){
-                num2 = stack.pop();
-                num1 = stack.pop();
-                stack.push(num1 + num2);
-            }else if(c.equals('-')){
-                num2 = stack.pop();
-                num1 = stack.pop();
-                stack.push(num1 - num2);
-            }else if(c.equals('*')){
-                num2 = stack.pop();
-                num1 = stack.pop();
-                stack.push(num1 * num2);
-            }else if(c.equals('/')){
-                num2 = stack.pop();
-                num1 = stack.pop();
-                stack.push(num1 / num2);
+            if(stack.count() == 1){
+                return stack.pop(); 
+            }else{
+                throw new Exception();
             }
-        }    */
-
+        }catch(ArithmeticException e){
+            System.out.println("ERROR: Division entre 0");
+        }catch(InputMismatchException e){
+            System.out.println("ERROR: Su operacion tiene un operando invalido ↓");
+        }catch(NullPointerException e){
+            System.out.println("No hay suficientes operandos");
+        }catch(Exception e){
+            System.out.println("No hay suficientes operadores");
+        }
+        return 999999;
     }
 }

@@ -34,7 +34,6 @@ public class Vista {
         prnt("QUE SE ENCUENTRA EN LA MISMA DIRECCION QUE 'main.java'.");
     }
     public void showResult(String expresion, int result){
-        separation();
         prnt("Se ha evaluado la siguiente expresion: " + expresion);
         prnt("Resultado: " + result);
         separation();
