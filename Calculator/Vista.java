@@ -11,7 +11,7 @@ public class Vista {
     /** 
      * @param text The text to show on the console
      */
-    public void prnt(String text){
+    private void prnt(String text){
         System.out.println(text);
     }
     /**
@@ -30,9 +30,9 @@ public class Vista {
         prnt("* leyendo 'datos.txt' *");
     }
     /**
-     * Shows in the console that the file was succesfully read
+     * Shows in the console that the file was successfully read
      */
-    public void succesfullyRead(){
+    public void successfullyRead(){
         prnt("Leido con exito!");
         separation();
     }

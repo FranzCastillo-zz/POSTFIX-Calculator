@@ -23,23 +23,23 @@ public class Calculadora implements IPosfixCalc{
                 }else if (Arrays.asList(operators).contains(values[i])){
                     switch(values[i]){
                         case "+":
-                            num2 = stack.pop();
-                            num1 = stack.pop();
+                            num2 = stack.pull();
+                            num1 = stack.pull();
                             stack.push(num1 + num2);
                         break;
                         case "-":
-                            num2 = stack.pop();
-                            num1 = stack.pop();
+                            num2 = stack.pull();
+                            num1 = stack.pull();
                             stack.push(num1 - num2);
                         break;
                         case "*":
-                            num2 = stack.pop();
-                            num1 = stack.pop();
+                            num2 = stack.pull();
+                            num1 = stack.pull();
                             stack.push(num1 * num2);
                         break;
                         case "/":
-                            num2 = stack.pop();
-                            num1 = stack.pop();
+                            num2 = stack.pull();
+                            num1 = stack.pull();
                             stack.push(num1 / num2);
                         break;
                         default:
@@ -51,7 +51,7 @@ public class Calculadora implements IPosfixCalc{
                 }
             }
             if(stack.count() == 1){
-                return stack.pop(); 
+                return stack.pull(); 
             }else{
                 throw new Exception();
             }

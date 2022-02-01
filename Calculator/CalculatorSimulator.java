@@ -26,7 +26,7 @@ public class CalculatorSimulator {
         v.start();
         if(readFile()){ // IF THE FILE WAS SUCCESFULLY READ
             while(!linesStack.isEmpty()){ // WHILE THERE'S STILL LINES TO BE OPERATED
-                String temp = linesStack.pop();
+                String temp = linesStack.pull();
                 v.showResult(temp, calc.Evaluate(temp));
             }
         }
@@ -44,7 +44,7 @@ public class CalculatorSimulator {
                 linesStack.push(fileReader.nextLine());
             }
             fileReader.close();
-            v.succesfullyRead();
+            v.successfullyRead();
             return true;
         }catch(FileNotFoundException e){
             v.fileNotFound();
