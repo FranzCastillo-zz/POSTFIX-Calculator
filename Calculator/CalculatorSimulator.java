@@ -24,7 +24,7 @@ public class CalculatorSimulator {
         v.start();
         if(readFile()){ // IF THE FILE WAS SUCCESFULLY READ
             while(!linesStack.isEmpty()){ // WHILE THERE'S STILL LINES TO BE OPERATED
-                String temp = linesStack.pull();
+                String temp = linesStack.pop();
                 v.showResult(temp, calc.Evaluate(temp));
             }
         }

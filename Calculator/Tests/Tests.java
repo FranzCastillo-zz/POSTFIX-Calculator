@@ -25,17 +25,17 @@ public class Tests {
     }
 
     @Test
-    public void pullTest(){
+    public void popTest(){
         Stack<String> st = new Stack<String>();
         st.push("a");
-        assertEquals("a", st.pull());
-        assertEquals(null, st.pull());
+        assertEquals("a", st.pop());
+        assertEquals(null, st.pop());
 
         st.push("a");
         st.push("b");
-        assertEquals("b", st.pull());
-        assertEquals("a", st.pull());
-        assertEquals(null, st.pull());
+        assertEquals("b", st.pop());
+        assertEquals("a", st.pop());
+        assertEquals(null, st.pop());
     }
 
     @Test
@@ -47,7 +47,7 @@ public class Tests {
         st.push(3);
         assertEquals(3, st.count());
 
-        st.pull();
+        st.pop();
         assertEquals(2, st.count());
     }
 
@@ -57,7 +57,7 @@ public class Tests {
         assertEquals(true, st.isEmpty());
         st.push("a");
         assertEquals(false, st.isEmpty());
-        st.pull();
+        st.pop();
         assertEquals(true, st.isEmpty());
     }
 

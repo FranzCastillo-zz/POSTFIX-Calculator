@@ -21,7 +21,7 @@ public class Stack<T> implements IStack<T>{
     }
 
     @Override
-    public T pull() {
+    public T pop() {
         if(!isEmpty()){
             T temp = vector.lastElement();
             vector.remove(vector.size() - 1);

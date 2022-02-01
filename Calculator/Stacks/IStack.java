@@ -11,7 +11,7 @@ public interface IStack<T> {
      * Gets the most recent value to be pushed into the stack and removes it
      * @return the most recent value to be pushed into the stack
      */
-    public T pull();
+    public T pop();
 
     /**
      * Gets the most recent value to be pushed into the stack and but doesn't remove it
