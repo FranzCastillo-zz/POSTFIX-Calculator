@@ -22,7 +22,7 @@ public class Stack<T> implements IStack<T>{
 
     @Override
     public T pop() {
-        if(!isEmpty()){
+        if(!isEmpty()){ // IF THERE'S SOMETHING IN THE STACK
             T temp = vector.lastElement();
             vector.remove(vector.size() - 1);
             return temp;    
@@ -45,5 +45,4 @@ public class Stack<T> implements IStack<T>{
     public boolean isEmpty() {
         return vector.isEmpty();
     }
-    
 }

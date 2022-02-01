@@ -1,7 +1,6 @@
 package Calculator;
 
 import java.util.Arrays;
-import java.util.InputMismatchException;
 
 import Stacks.Stack;
 
@@ -48,7 +47,7 @@ public class Calculadora implements IPosfixCalc{
                         break;
                     }
                 }else{
-                    throw new InputMismatchException();
+                    throw new NumberFormatException();
                 }
             }
             if(stack.count() == 1){
@@ -58,7 +57,7 @@ public class Calculadora implements IPosfixCalc{
             }
         }catch(ArithmeticException e){
             System.out.println("ERROR: Division entre 0");
-        }catch(InputMismatchException e){
+        }catch(NumberFormatException e){
             System.out.println("ERROR: Su operacion tiene un operando invalido ↓");
         }catch(NullPointerException e){
             System.out.println("No hay suficientes operandos");

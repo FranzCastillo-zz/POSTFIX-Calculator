@@ -1,5 +1,8 @@
 package Stacks;
-
+/**
+ * @author Francisco Castillo
+ * 
+ */
 public interface IStack<T> {
     /***
      * Inserts the value on top of the stack

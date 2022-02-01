@@ -19,7 +19,9 @@ public class CalculatorSimulator {
         linesStack = new Stack<String>();
         calc = new Calculadora();
     }
-    
+    /**
+     * Driver program
+     */
     public void execute(){
         v.start();
         if(readFile()){ // IF THE FILE WAS SUCCESFULLY READ
@@ -30,6 +32,10 @@ public class CalculatorSimulator {
         }
     }
 
+    
+    /** Tries to read the file 'datos.txt' on the same path.
+     * @return boolean TRUE if the file was succesfully read, FALSE if not
+     */
     private boolean readFile(){
         try{
             File file = new File("datos.txt");
