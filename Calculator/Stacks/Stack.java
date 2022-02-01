@@ -1,3 +1,9 @@
+/**
+ * @author Francisco Castillo
+ * This class is the implementation of stacks with vectors.
+ * 
+ */
+
 package Stacks;
 
 import java.util.Vector;

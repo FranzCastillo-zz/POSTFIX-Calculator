@@ -1,3 +1,9 @@
+/**
+ * @author Francisco Castillo
+ * Tests for the Postfix calculator.
+ * 
+ */
+
 package Tests;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
