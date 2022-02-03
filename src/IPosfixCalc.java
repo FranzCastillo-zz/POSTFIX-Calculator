@@ -1,5 +1,3 @@
-package Calculator;
-
 /**
  * @author moises.alonso
  *

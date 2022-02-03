@@ -3,9 +3,6 @@
  * This class is the implementation of stacks with vectors.
  * 
  */
-
-package Stacks;
-
 import java.util.Vector;
 
 public class Stack<T> implements IStack<T>{

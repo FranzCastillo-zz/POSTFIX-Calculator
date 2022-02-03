@@ -1,9 +1,4 @@
-package Calculator;
-
 import java.util.Arrays;
-
-import Stacks.Stack;
-
 /**
  * @author Francisco Castillo
  * The implementaiton of the calculator of postfix calculations

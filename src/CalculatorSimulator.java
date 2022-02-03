@@ -2,9 +2,6 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
 
-import Calculator.Calculadora;
-import Stacks.Stack;
-
 /**
  * @author Francisco Castillo
  * This is the Controller of the MVC implementation of the calculator
