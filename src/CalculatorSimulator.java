@@ -35,7 +35,7 @@ public class CalculatorSimulator {
      */
     private boolean readFile(){
         try{
-            File file = new File("datos.txt");
+            File file = new File("src\\datos.txt");
             Scanner fileReader = new Scanner(file);
             while(fileReader.hasNextLine()){
                 linesStack.push(fileReader.nextLine());

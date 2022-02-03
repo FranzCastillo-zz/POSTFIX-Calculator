@@ -9,12 +9,12 @@ import java.util.Scanner;
 public class CalculatorSimulator {
     private Vista v;
     private Stack<String> linesStack;
-    private Calculadora calc;
+    private PosfixCalc calc;
 
     public CalculatorSimulator(){
         v = new Vista();
         linesStack = new Stack<String>();
-        calc = new Calculadora();
+        calc = new PosfixCalc();
     }
     /**
      * Driver program
