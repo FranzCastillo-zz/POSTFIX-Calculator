@@ -1,0 +1,1 @@
+typeSearchIndex = [{"l":"All Classes and Interfaces","u":"allclasses-index.html"},{"p":"<Unnamed>","l":"CalculatorSimulator"},{"p":"<Unnamed>","l":"IPosfixCalc"},{"p":"<Unnamed>","l":"IStack"},{"p":"<Unnamed>","l":"Main"},{"p":"<Unnamed>","l":"PosfixCalc"},{"p":"<Unnamed>","l":"Stack"},{"p":"<Unnamed>","l":"Vista"}];updateSearchResults();
