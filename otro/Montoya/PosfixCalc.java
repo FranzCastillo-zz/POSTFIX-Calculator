@@ -14,14 +14,15 @@ public class PosfixCalc implements IPosfixCalc{
 	private String[] numeros;
 	private String[] operadores;
 	public PosfixCalc() {
-		stack = new Stack<String>();
 		numeros = new String[] {"0","1","2","3","4","5","6","7","8","9"};
 		operadores = new String[] {"-","+","*","/"};
 	}
 	
 	@Override
 	public int Evaluate(String expresion) {
+		stack = new Stack<String>();
 		int finalres=0;
+		boolean bandera=false;
 		try {
 			String[] carac = expresion.split(" ");
 			for(int i=0;i<carac.length;i++) {
@@ -48,10 +49,10 @@ public class PosfixCalc implements IPosfixCalc{
 						default:
 							break;
 						}
-						System.out.println(res);
 						stack.push(res+"");
 					} else {
 						System.out.println("La estructura de la operacion no es correcta, faltan operandos para realizar la operacion");
+						bandera = true;
 					}
 				}else {
 					System.out.println("La estructura de la operacion no es correcta, caracteres invalidos");
@@ -67,6 +68,10 @@ public class PosfixCalc implements IPosfixCalc{
 			System.out.println("Math ERROR");
 			System.out.println("**********");
 		}
-		return finalres;
+		if(bandera) {
+			return 0;
+		}else {
+			return finalres;
+		}
 	}
 }

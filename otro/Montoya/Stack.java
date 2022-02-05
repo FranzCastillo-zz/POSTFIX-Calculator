@@ -22,12 +22,21 @@ public class Stack<T> implements IStack<T>{
 
 	@Override
 	public T pull() {
-		return core.remove(0);
+		if(!isEmpty()) {
+			return core.remove(0);
+		}else {
+			return null;
+		}
+		
 	}
 
 	@Override
 	public T peek() {
-		return core.get(0);
+		if(!isEmpty()) {
+			return core.get(0);
+		}else{
+			return null;
+		}
 	}
 
 	@Override
